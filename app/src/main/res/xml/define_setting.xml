@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:fragment="org.chromium.chrome.browser.preferencedemo.BlankFragment"
+        android:key="new_fragment"
+        android:summary="开启Fragment"
+        android:title="我是新的Fragment" />
+</PreferenceScreen>
