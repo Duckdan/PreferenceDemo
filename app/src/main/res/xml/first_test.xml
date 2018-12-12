@@ -3,6 +3,9 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory android:title="显示一排偏好">
+        <!--
+            android:key的值是为了在代码中通过该key值获取相应value
+        -->
         <CheckBoxPreference
             android:key="checkbox_preference"
             android:summary="这是一个开关button"
@@ -39,13 +42,16 @@
         <PreferenceScreen
             android:summary="通过意图启动一个Activity"
             android:title="意图偏好">
+            <!--
+                android:action=""使用intent属性时action的属性不能为空，其值可以随意指定
+                android:data=""使用传递intent打开的属性值
+            -->
             <!--android:action="android.intent.action.VIEW"-->
             <!--android:data="http://www.android.com" -->
             <intent
                 android:action="android.intent.action.MAIN"
                 android:targetClass="org.chromium.chrome.browser.preferencedemo.open_fragment.DefineActivity"
-                android:targetPackage="org.chromium.chrome.browser.preferencedemo"
-                />
+                android:targetPackage="org.chromium.chrome.browser.preferencedemo" />
         </PreferenceScreen>
     </PreferenceCategory>
     <PreferenceCategory android:title="偏好属性">
@@ -64,8 +70,8 @@
 
     <!--android:fragment代表着点击此条目时-->
     <Preference
-        android:summary="开启Fragment"
-        android:title="我是新的Fragment"
+        android:fragment="org.chromium.chrome.browser.preferencedemo.BlankFragment"
         android:key="new_fragment"
-        android:fragment="org.chromium.chrome.browser.preferencedemo.BlankFragment" />
+        android:summary="开启Fragment"
+        android:title="我是新的Fragment" />
 </PreferenceScreen>
